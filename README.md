@@ -44,11 +44,11 @@
 + Operating environment: Python 3.5.X
 + Operating system: Linux (take Ubuntu 15.10 as an example)
 
-### 1. Python related environment configuration (Python 2.7 is installed by default in Ubuntu without additional installation of Python)
-Python package manager installation: sudo apt-get install python-setuptools python-pip
+### 1. Python related environment configuration
+Python package manager installation: sudo apt-get install python-setuptools python3-pip
 
 ### 2. Related third-party dependency library installation:
-+ sudo apt-get install tcpdump graphviz imagemagick python-gnuplot python-crypto python-pyx
++ sudo apt-get install tcpdump graphviz imagemagick python3-gnuplot python3-crypto python3-pyx
 + sudo pip3 install Flask
 + sudo pip3 install Flask-WTF
 + sudo pip3 install geoip2
@@ -64,7 +64,8 @@ Pay attention to modify the directory location in the config.py configuration fi
 
 ### 4. Server installation
 + Gunicorn server: pip3 install gunicorn
-+ Nginx server: sudo apt-get install nginx
++ `mkdir /var/log/gunicorn`
++ Nginx server: `sudo apt-get install nginx`
 + Nginx configuration: modify the /etc/nginx/nginx.conf file, add the following code in http{}:
 ```
 server {
